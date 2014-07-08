@@ -28,12 +28,13 @@
 
         var positionTabUnderCurrentActiveTab = function($element) {
             var $activeTab = $element.find("li.active a");
-            positionTabUnderline($element, $activeTab);
+            if (_.any($activeTab)) {
+                positionTabUnderline($element, $activeTab);
+            }
         };
 
         var positionTabUnderline = function($element, $tab) {
             var $slidingBar = $element.find("." + barClassName);
-
             //Set left
             var left = $tab.position().left;
             $slidingBar.css("left", left + "px");
