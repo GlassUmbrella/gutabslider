@@ -21,3 +21,6 @@ To animated the underline just use CSS... to make it slide just add the followin
 }
 ```
 
+## Dependencies
+* jQuery
+* underscore.js

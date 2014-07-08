@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<style>
+		body {
+		    font-family: sans-serif;
+		    margin-top: 50px;
+		}
+
+		ul {
+		    position: relative;
+		    padding: 0;
+		    margin: 0;
+		    list-style-type: none;
+		}
+
+		ul li {
+		    float: left;
+		}
+
+		ul li a {
+		    display: block;
+		    padding: 10px 20px;
+		    text-decoration: none;
+		    color: #232323;
+		}
+
+		ul li.active:hover a {
+		    background: #f7f8f9;
+		}
+
+		ul li.home:hover a,
+		ul li.home.active a {
+		    color: #00856b;
+		}
+		ul li.home.active ~ .gu-sliding-bar {
+		    background: #00856b;
+		}
+
+		ul li.about:hover a,
+		ul li.about.active a {
+		    color: #3585ca;
+		}
+		ul li.about.active ~ .gu-sliding-bar {
+		    background: #3585ca;
+		}
+
+		ul li.details:hover a,
+		ul li.details.active a {
+		    color: #ed3a3a;
+		}
+		ul li.details.active ~ .gu-sliding-bar {
+		    background: #ed3a3a;
+		}
+
+		ul li.contact:hover a,
+		ul li.contact.active a {
+		    color: #33b4e0;
+		}
+		ul li.contact.active ~ .gu-sliding-bar {
+		    background: #33b4e0;
+		}
+
+		ul li.help:hover a,
+		ul li.help.active a {
+		    color: #9554c0;
+		}
+		ul li.help.active ~ .gu-sliding-bar {
+		    background: #9554c0;
+		}
+
+		ul li.support:hover a,
+		ul li.support.active a {
+		    color: #0ca797;
+		}
+		ul li.support.active ~ .gu-sliding-bar {
+		    background: #0ca797;
+		}
+
+		ul li a,
+		.gu-sliding-bar {
+		    -webkit-transition: all 0.2s ease;
+		    -moz-transition: all 0.2s ease;
+		    -o-transition: all 0.2s ease;
+		    transition: all 0.2s ease;
+		    -webkit-transform: translate3d(0, 0, 0); //Makes transition hardware accelerated
+		}
+		</style>
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+		<script src="gutabslider.js"></script>
+
+		<script>
+			$(function() {
+				$("#tabs").gutabslider();
+
+				// Move the active class when you click on a new tab
+				$("#tabs li a").click(function() {
+				    $("#tabs .active").removeClass("active");
+				    $(this).parent("li").addClass("active");
+				    $("#tabs").gutabslider("active-tab-changed");
+				});
+			});
+		</script>
+	</head>
+	<body>
+	    <ul id="tabs">
+	        <li class="home active">
+	            <a href="#">Home</a>
+	        </li>
+	        <li class="about">
+	            <a href="#">About</a>
+	        </li>
+	        <li class="details">
+	            <a href="#">Details</a>
+	        </li>
+	        <li class="contact">
+	            <a href="#">Contact</a>
+	        </li>
+	        <li class="help">
+	            <a href="#">Help</a>
+	        </li>
+	        <li class="support">
+	            <a href="#">Support</a>
+	        </li>
+	    </ul>
+	</body>
+</html>
