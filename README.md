@@ -3,6 +3,8 @@ gutabslider
 
 Animated underline for active tabs
 
+![Example](http://i.imgur.com/BXZfVg8.gif)
+
 ## Basic usage
 
 Just call `$("#my-tabs").gutabslider();` to get started
