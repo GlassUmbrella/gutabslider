@@ -1,0 +1,14 @@
+{
+  "name": "gutabslider",
+  "main": "gutabslider.js",
+  "homepage": "https://github.com/GlassUmbrella/gutabslider",
+  "authors": [
+    "Eddie Lee"
+  ],
+  "description": "Animated tab underline",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "underscore": "^1.8.3"
+  }
+}
